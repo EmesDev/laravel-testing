@@ -4,22 +4,21 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration {
+return new class extends Migration
+{
     /**
      * Run the migrations.
      */
     public function up(): void
     {
         Schema::create('owners', function (Blueprint $table) {
-            $table->id('Owner_id');
-            $table->string('Name');
-            $table->string('CPF')->unique();
-            $table->string('Address');
-            $table->string('Phone');
-            $table->string('Email');
-            $table->integer('Date_of_Birth');
-            $table->datetimes('created_at')->nullable()->default(null);
-            $table->datetimes('updated_at')->nullable()->default(null);
+            $table->id();
+            $table->string('name', 100);
+            $table->string('cpf', 14)->unique();
+            $table->string('address', 100);
+            $table->string('phone', 11);
+            $table->string('email', 100)->unique();
+            $table->string('date', 100);
             $table->timestamps();
         });
     }
