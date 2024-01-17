@@ -12,4 +12,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::apiResource('owners', OwnerControler::class);
-Route::apiResource('vehicle', VehicleController::class);
+Route::apiResource('vehicles', VehicleController::class);
+Route::apiResource('records', VehicleController::class);
