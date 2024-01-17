@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\OwnerControler;
+use App\Http\Controllers\VehicleController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -11,3 +12,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::apiResource('owners', OwnerControler::class);
+Route::apiResource('vehicle', VehicleController::class);
