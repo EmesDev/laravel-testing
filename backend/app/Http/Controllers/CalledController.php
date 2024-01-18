@@ -3,20 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\ServiceRecords;
+use App\Models\Called;
 
-
-class ServiceRecordsController extends Controller
+class CalledController extends Controller
 {
-    protected $service_records;
+    protected $called;
     public function __construct()
     {
-        $this->service_records = new ServiceRecords();
+        $this->called = new Called();
     }
-
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
-        return $this->service_records->all();
+        return $this->called->all();
     }
 
     /**
@@ -24,7 +25,7 @@ class ServiceRecordsController extends Controller
      */
     public function store(Request $request)
     {
-        return $this->service_records->create($request->all());
+        return $this->called->create($request->all());
     }
 
     /**
@@ -32,15 +33,15 @@ class ServiceRecordsController extends Controller
      */
     public function show(string $id)
     {
-        $service_records = $this->service_records->find($id);
+        $called = $this->called->find($id);
 
-        if (!$service_records) {
+        if (!$called) {
             return response()->json([
                 'message' => 'Record not found'
             ], 404);
         }
 
-        return $service_records;
+        return $called;
     }
 
     /**
@@ -48,18 +49,18 @@ class ServiceRecordsController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $service_records = $this->service_records->find($id);
+        $called = $this->called->find($id);
 
-        if (!$service_records) {
+        if (!$called) {
             return response()->json([
                 'message' => 'Proprietário não encontrado'
             ], 404);
         }
 
-        $service_records->fill($request->all());
-        $service_records->save();
+        $called->fill($request->all());
+        $called->save();
 
-        return $service_records;
+        return $called;
     }
 
     /**
@@ -67,14 +68,14 @@ class ServiceRecordsController extends Controller
      */
     public function destroy(string $id)
     {
-        $service_records = $this->service_records->find($id);
+        $called = $this->called->find($id);
 
-        if (!$service_records) {
+        if (!$called) {
             return response()->json([
                 'message' => 'Proprietário não encontrado'
             ], 404);
         }
 
-        $service_records->delete();
+        $called->delete();
     }
 }

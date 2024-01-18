@@ -5,16 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ServiceRecords extends Model
+class Called extends Model
 {
-    protected $table = 'service_records';
+    protected $table = 'called';
     protected $primaryKey = 'id';
     protected $fillable = [
-        'vehicle_id',
         'owner_id',
-        'service_date',
-        'service_description',
-        'cost',
+        'title',
+        'description',
     ];
     use HasFactory;
 }

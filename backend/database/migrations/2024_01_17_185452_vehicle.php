@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('brand', 255);
             $table->string('model', 255);
             $table->integer('year');
-            $table->string('plate', 10);
+            $table->string('plate', 10)->unique();
             $table->string('color', 50);
             $table->string('chassis', 17);
             $table->timestamps();
