@@ -17,10 +17,12 @@ return new class extends Migration
             $table->string('cpf', 14)->unique();
             $table->string('address', 100);
             $table->string('phone', 11);
-            $table->string('email', 100)->unique();
+            $table->string('email', 100);
+            $table->string('password', 255);
             $table->string('date', 100);
             $table->timestamps();
         });
+
     }
 
     /**

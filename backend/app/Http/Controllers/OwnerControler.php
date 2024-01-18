@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Owner;
+use Illuminate\Support\Facades\Hash;
 
 class OwnerControler extends Controller
 {
@@ -26,6 +27,9 @@ class OwnerControler extends Controller
      */
     public function store(Request $request)
     {
+
+        $request['password'] = Hash::make($request['password']);
+
         return $this->owner->create($request->all());
     }
 
