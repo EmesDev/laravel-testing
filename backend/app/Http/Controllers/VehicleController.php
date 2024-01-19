@@ -16,7 +16,9 @@ class VehicleController extends Controller
 
     public function index()
     {
-        return $this->vehicle->all();
+        $vehicles = Vehicle::select('id',	'owner_id',	'brand',	'model',	'year',	'plate',	'color',	'chassis')->paginate(5);
+
+        return response()->json($vehicles);
     }
 
     /**

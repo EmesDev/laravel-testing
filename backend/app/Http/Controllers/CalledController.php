@@ -11,13 +11,16 @@ class CalledController extends Controller
     public function __construct()
     {
         $this->called = new Called();
+       
     }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return $this->called->all();
+        // return $this->called->all();
+        $called = Called::select('id', 'owner_id', 'title', 'description')->paginate(5);
+        return response()->json($called);
     }
 
     /**

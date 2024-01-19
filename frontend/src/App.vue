@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView,  } from 'vue-router'
 import SidebarComponent from '@/components/SidebarComponent.vue'
 import NavbarComponent from '@/components/NavbarComponent.vue'
-</script>
 
+
+</script>
 <template>
   <main>
     <div class="grid">

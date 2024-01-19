@@ -16,7 +16,9 @@ class ServiceRecordsController extends Controller
 
     public function index()
     {
-        return $this->service_records->all();
+        $records = ServiceRecords::select('id', 'vehicle_id', 'owner_id', 'service_date', 'service_description', 'cost')->paginate(5);
+
+        return response()->json($records);
     }
 
     /**

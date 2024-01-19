@@ -11,9 +11,11 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::post('login', [AuthController::class, 'auth']);
+Route::apiResource('owners', OwnerControler::class);
+// Route::post('owners/paginate', [OwnerControler::class, 'paginate']);
+
 
 Route::middleware(['auth:sanctum'])->group(function () {
-    Route::apiResource('owners', OwnerControler::class);
     Route::apiResource('vehicles', VehicleController::class);
     Route::apiResource('records', ServiceRecordsController::class);
     Route::apiResource('calleds', CalledController::class);

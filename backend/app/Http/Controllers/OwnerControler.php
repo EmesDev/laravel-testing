@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Owner;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
+
 
 class OwnerControler extends Controller
 {
@@ -19,7 +21,10 @@ class OwnerControler extends Controller
      */
     public function index()
     {
-        return $this->owner->all();
+        // return $this->owner->all();
+        // return DB::select('SELECT id as ID, name as Nome, cpf as CPF, address as Endereco, phone as Telefone, email as Email,  date  FROM owners');
+        $owners = Owner::select('id', 'name', 'cpf', 'address', 'phone', 'email', 'date')->paginate(5);
+        return response()->json($owners);
     }
 
     /**
@@ -30,7 +35,18 @@ class OwnerControler extends Controller
 
         $request['password'] = Hash::make($request['password']);
 
-        return $this->owner->create($request->all());
+        $this->owner->create($request->all());
+
+        $user = DB::select('SELECT id, name, cpf, address, phone, email, password, date, created_at  FROM owners where email = ?', [$request['email']]);
+
+        return response()->json(
+            [
+                'message' => 'Proprietário cadastrado com sucesso',
+                'usuario' => $user
+            ],
+            201
+        );
+
     }
 
     /**
@@ -46,7 +62,7 @@ class OwnerControler extends Controller
             ], 404);
         }
 
-        return $owner;
+        return DB::select('SELECT id, name, cpf, address, phone, email, date, created_at  FROM owners where id = ?', [$id]);
     }
 
     /**
@@ -65,7 +81,13 @@ class OwnerControler extends Controller
         $owner->fill($request->all());
         $owner->save();
 
-        return $owner;
+        return response()->json(
+            [
+                'message' => 'Proprietário atualizado com sucesso',
+                'usuario' => DB::select('SELECT id, name, cpf, address, phone, email, date, created_at  FROM owners where id = ?', [$id])
+            ],
+            201
+        );
     }
 
     /**
@@ -82,5 +104,11 @@ class OwnerControler extends Controller
         }
 
         $owner->delete();
+
+        return response()->json([
+            'message' => 'Proprietário removido com sucesso'
+        ], 204);
     }
+
+    
 }
