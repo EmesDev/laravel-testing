@@ -6,9 +6,7 @@ import TableComponent from '@/components/TableComponent.vue'
 
 <template>
   <main>
-    <SidebarComponent></SidebarComponent>
     <!-- <StatsComponent></StatsComponent> -->
-    <div class="sidebar-content">
       <div class="wrapper">
         <div class="box a">a</div>
         <div class="box b">b</div>
@@ -16,8 +14,7 @@ import TableComponent from '@/components/TableComponent.vue'
         <div class="box d">d</div>
       </div>
 
-      <TableComponent></TableComponent>
-    </div>
+      <!-- <TableComponent :tableData=[name: teste]></TableComponent> -->
   </main>
 </template>
 
@@ -42,13 +39,4 @@ import TableComponent from '@/components/TableComponent.vue'
   font-size: 150%;
 }
 
-.sidebar-content {
-  margin-left: 250px;
-  padding: 20px;
-  height: 100vh;
-  background-color: #f2f2f2;
-  font-family: 'Nunito', sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
 </style>

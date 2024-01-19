@@ -9,12 +9,12 @@ const currentPage = ref(1)
 
 const props = defineProps({
   tableData: { type: Array as () => any[], required: true },
-  tableTitles: { type: Array as () => any[], required: true }
+  tableTitles: { type: Array, required: true }
   // bar: Number
 })
 const tableData = ref(JSON.parse(JSON.stringify(props.tableData)))
 const tableTitles = ref(JSON.parse(JSON.stringify(props.tableTitles)))
-console.log(JSON.parse(JSON.stringify(props.tableTitles)), 'titles')
+console.log(tableTitles, 'tableComponent')
 // console.log(tableData.value, 'tableComponent')
 
 const nextPage = () => {
@@ -43,7 +43,7 @@ const previousPage = () => {
         <!-- Table header -->
         <thead>
           <tr>
-            <th v-for="(value, key) in tableTitles" :key="key">{{ value }}</th>
+            <th v-for="(item, index) in tableTitles" :key="index">{{ index }}</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -75,70 +75,43 @@ const previousPage = () => {
 </template>
 
 <style>
+.table {
+  justify-content: center;
+  background-color: #f2f2f2;
+  font-size: smaller;
+  font-family: 'Nunito', sans-serif;
+  border: 1px solid #dddddd; 
+}
+
 table {
   border-collapse: collapse;
-  background-color: #f2f2f2;
-  width: 100%;
+  height: auto;
 }
-
-th,td {
+th,
+td {
+  border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
-  border: 1px solid #ddd;
+  background-color: #ffffff;
 }
+
 th {
-  text-transform: uppercase;
+  background-color: #f2f2f2;
 }
 
-td:nth-child(2){
-  white-space: calc(50% );
+th:first-child,
+td:first-child {
+  background-color: #ccc;
+  width: 100px;
+  padding-left: 8px;
+  margin: 0px;
 }
 
-@media screen and (max-width: 768px) {
-  table, thead, tbody, th, td, tr {
-   display: block;
-  }
-
-  thead tr {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-  }
-
-  tr { border: 1px solid #ccc; }
-
-  td {
-    border: none;
-    border-bottom: 1px solid #eee;
-    position: relative;
-  }
-
-  td:before {
-    position: absolute;
-    top: 6px;
-    left: 6px;
-    width: 45%;
-    padding-right: 10px;
-    white-space: nowrap;
-    font-weight: bold;
-  }
-
-  
-
-
-  
-    td, th {
-    border: none;
-  }
- 
-
-  td:before {
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-
-  
+th:hover,
+tr:hover {
+  background-color: #f2f2f2;
 }
+
 .pagination-controller {
   display: flex;
   justify-content: right;

@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <main>
+
     <div id="sidebar">
       <ul>
         <li class="header-sidebar">
@@ -29,16 +29,14 @@
         </li>
       </ul>
     </div>
-  </main>
+
 </template>
 
 <style>
 #sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
+
   width: 250px;
-  height: 100%;
+  height: 100vh;
   background-color: #333;
 }
 

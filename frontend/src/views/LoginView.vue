@@ -1,11 +1,27 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import route from '@/router';
+
+import LoginService from '@/services/LoginService'
+import TokenService from '@/services/TokenService'
+
+const tokenService = new TokenService()
+const loginService = new LoginService(tokenService)
 
 const email = ref('')
 const password = ref('')
 
 const handleLogin = () => {
-  // handle login logic here
+  loginService
+    .login(email.value, password.value)
+    .then((response) => {
+      console.log('login success')
+      route.push('/home')
+      
+    })
+    .catch((error) => {
+      console.log(error)
+    })
 }
 </script>
 
