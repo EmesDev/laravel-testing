@@ -2,7 +2,7 @@ import axios from 'axios'
 import TokenService from './TokenService'
 import { env } from 'env'
 
-export default class vehicleService {
+export default class recordsService {
   constructor(private tokenService: TokenService) {}
 
   //http://localhost:8080/api/records

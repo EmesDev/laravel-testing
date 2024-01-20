@@ -1,6 +1,5 @@
 import axios from 'axios'
 import TokenService from './TokenService'
-import { env } from 'env'
 
 export default class vehicleService {
   constructor(private tokenService: TokenService) {}
@@ -8,7 +7,7 @@ export default class vehicleService {
   //http://localhost:8080/api/vehicles
   public async getVehicles() {
     const response = await axios
-      .get(`${env.url}/api/vehicles`, {
+      .get(`http://localhost:8080/api/vehicles`, {
         headers: {
           Authorization: await this.HeaderToken()
         }
@@ -26,7 +25,7 @@ export default class vehicleService {
   // http://localhost:8080/api/vehicles/1
   public async getVehicle(id: string) {
     const response = await axios
-      .get(`${env.url}/api/vehicles/${id}`, {
+      .get(`http://localhost:8080/api/vehicles/${id}`, {
         headers: {
           Authorization: await this.HeaderToken()
         }
@@ -44,7 +43,7 @@ export default class vehicleService {
   // [POST] http://localhost:8080/api/vehicles
   public async createVehicle(data: any) {
     const response = await axios
-      .post(`${env.url}/api/vehicles`, data, {
+      .post(`http://localhost:8080/api/vehicles`, data, {
         headers: {
           Authorization: await this.HeaderToken()
         }
@@ -62,7 +61,7 @@ export default class vehicleService {
   // [PATCH] http://localhost:8080/api/vehicles/1
   public async updateVehicle(id: string, data: any) {
     const response = await axios
-      .patch(`${env.url}/api/vehicles/${id}`, data, {
+      .patch(`http://localhost:8080/api/vehicles/${id}`, data, {
         headers: {
           Authorization: await this.HeaderToken()
         }
@@ -79,7 +78,7 @@ export default class vehicleService {
     // [DELETE] http://localhost:8080/api/vehicles/1
   public async deleteVehicle(id: string) {
     const response = await axios
-      .delete(`${env.url}/api/vehicles/${id}`, {
+      .delete(`http://localhost:8080/api/vehicles/${id}`, {
         headers: {
           Authorization: await this.HeaderToken()
         }
