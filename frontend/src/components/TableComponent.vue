@@ -74,7 +74,7 @@ const previousPage = (path: string) => {
       </div>
     </div>
 
-    <div>
+    <!-- <div>
       <div class="delete-modal-bg"></div>
       <div class="deleteModal">
         <div class="delete-modal-header">
@@ -92,7 +92,7 @@ const previousPage = (path: string) => {
           
         </div>
       </div>
-    </div>
+    </div> -->
   </main>
 </template>
 
