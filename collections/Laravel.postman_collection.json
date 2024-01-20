@@ -2,6 +2,7 @@
 	"info": {
 		"_postman_id": "802ffa33-594b-455f-a0bb-778c76cf8061",
 		"name": "Laravel",
+		"description": "**Dependencias do Projeto:**\n\n| Requisitos | Version |\n| --- | --- |\n| Doker | v24.0.7 |\n| PHP | v8.2 |\n| Composer | v2.6.6 |\n| Laravel | v10 |",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "28385761"
 	},
@@ -11,9 +12,25 @@
 			"item": [
 				{
 					"name": "/owners",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|Mnjd2iBv8QLSpuP2AVPlcSen6Hw7zRZEbSJfrsjr35a9ab4f",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "http://localhost:8080/api/owners",
 							"protocol": "http",
@@ -27,7 +44,81 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 39|hzLWOHQQBaPhcAPXPAy5PKF0EYap2LsgwOBepQcf88d7b20d",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/owners",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"owners"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Jan 2024 00:36:27 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 70,\n            \"name\": \"Emserson Franco\",\n            \"cpf\": \"999.999.991-90\",\n            \"address\": \"Rua Dalva Maria - Bairro Jardineiras - Visconde Do Rio Branco - MG. CEP:999999-99\",\n            \"phone\": \"32999999999\",\n            \"email\": \"Emerson@emesdeaadwdavsa.com\",\n            \"date\": \"15/02/98\"\n        },\n        {\n            \"id\": 72,\n            \"name\": \"Emserson Franco\",\n            \"cpf\": \"999.999.991-10\",\n            \"address\": \"Rua Dalva Maria - Bairro Jardineiras - Visconde Do Rio Branco - MG. CEP:999999-99\",\n            \"phone\": \"32999999999\",\n            \"email\": \"Emerson@emesdeaadwdasdavsa.com\",\n            \"date\": \"15/02/98\"\n        },\n        {\n            \"id\": 73,\n            \"name\": \"Emsedawdrson Franco\",\n            \"cpf\": \"999.999.991-20\",\n            \"address\": \"Rua Dalva Maria - Bairro Jardineiras - Visconde Do Rio Branco - MG. CEP:999999-99\",\n            \"phone\": \"32999999999\",\n            \"email\": \"Emerson@dasdavsa.com\",\n            \"date\": \"15/02/98\"\n        },\n        {\n            \"id\": 74,\n            \"name\": \"Emsedawdrson Franco\",\n            \"cpf\": \"999.999.991-30\",\n            \"address\": \"Rua Dalva Maria - Bairro Jardineiras - Visconde Do Rio Branco - MG. CEP:999999-99\",\n            \"phone\": \"32999999999\",\n            \"email\": \"Emerson@dadavsa.com\",\n            \"date\": \"15/02/98\"\n        },\n        {\n            \"id\": 75,\n            \"name\": \"Emsedawdrson Franco\",\n            \"cpf\": \"999.999.991-40\",\n            \"address\": \"Rua Dalva Maria - Bairro Jardineiras - Visconde Do Rio Branco - MG. CEP:999999-99\",\n            \"phone\": \"32999999999\",\n            \"email\": \"Emerson@ddavsa.com\",\n            \"date\": \"15/02/98\"\n        }\n    ],\n    \"first_page_url\": \"http://localhost:8080/api/owners?page=1\",\n    \"from\": 1,\n    \"last_page\": 4,\n    \"last_page_url\": \"http://localhost:8080/api/owners?page=4\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://localhost:8080/api/owners?page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": \"http://localhost:8080/api/owners?page=2\",\n            \"label\": \"2\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://localhost:8080/api/owners?page=3\",\n            \"label\": \"3\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://localhost:8080/api/owners?page=4\",\n            \"label\": \"4\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://localhost:8080/api/owners?page=2\",\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": \"http://localhost:8080/api/owners?page=2\",\n    \"path\": \"http://localhost:8080/api/owners\",\n    \"per_page\": 5,\n    \"prev_page_url\": null,\n    \"to\": 5,\n    \"total\": 16\n}"
+						}
+					]
 				},
 				{
 					"name": "/owners/:id",
@@ -35,7 +126,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/owners",
+							"raw": "http://localhost:8080/api/owners/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -43,20 +134,101 @@
 							"port": "8080",
 							"path": [
 								"api",
-								"owners"
+								"owners",
+								"1"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/owners/70",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"owners",
+										"70"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Jan 2024 00:36:53 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 70,\n        \"name\": \"Emserson Franco\",\n        \"cpf\": \"999.999.991-90\",\n        \"address\": \"Rua Dalva Maria - Bairro Jardineiras - Visconde Do Rio Branco - MG. CEP:999999-99\",\n        \"phone\": \"32999999999\",\n        \"email\": \"Emerson@emesdeaadwdavsa.com\",\n        \"date\": \"15/02/98\",\n        \"created_at\": \"2024-01-19 00:32:08\"\n    }\n]"
+						}
+					]
 				},
 				{
 					"name": "/owners",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 4|TKBQVC51NJXSYycoIuQQWPWyjXXAldzi9JtGP5pFef557fb0",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Emesdev\",\r\n    \"cpf\": \"123\",\r\n    \"address\": \"rua\",\r\n    \"phone\": \"123\",\r\n    \"email\": \"email@gmail.com\",\r\n    \"date\": \"dwdaw\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Emsedawdrson Franco\",\r\n    \"cpf\": \"911.199.991-20\",\r\n    \"address\": \"Rua Dalva Maria - Bairro Jardineiras - Visconde Do Rio Branco - MG. CEP:999999-99\",\r\n    \"phone\": \"32999999399\",\r\n    \"email\": \"11@dw9davaa.com\",\r\n    \"password\": \"teste123@\",\r\n    \"date\": \"15/02/98\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -76,15 +248,189 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "201 Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 4|TKBQVC51NJXSYycoIuQQWPWyjXXAldzi9JtGP5pFef557fb0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Emsedawdrson Franco\",\r\n    \"cpf\": \"911.199.991-20\",\r\n    \"address\": \"Rua Dalva Maria - Bairro Jardineiras - Visconde Do Rio Branco - MG. CEP:999999-99\",\r\n    \"phone\": \"32999999399\",\r\n    \"email\": \"11@dw9davaa.com\",\r\n    \"password\": \"teste123@\",\r\n    \"date\": \"15/02/98\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/owners",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"owners"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Jan 2024 00:38:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Proprietário cadastrado com sucesso\",\n    \"usuario\": [\n        {\n            \"id\": 89,\n            \"name\": \"Emsedawdrson Franco\",\n            \"cpf\": \"911.199.991-20\",\n            \"address\": \"Rua Dalva Maria - Bairro Jardineiras - Visconde Do Rio Branco - MG. CEP:999999-99\",\n            \"phone\": \"32999999399\",\n            \"email\": \"11@dw9davaa.com\",\n            \"password\": \"$2y$12$v53qV4/MszrKlRHfQlLUz./bQxu9KVOZbaklwfTCSI/mqdGIUrVTO\",\n            \"date\": \"15/02/98\",\n            \"created_at\": \"2024-01-20 00:38:23\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "500 Internal Server Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 4|TKBQVC51NJXSYycoIuQQWPWyjXXAldzi9JtGP5pFef557fb0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Emsedawdrson Franco\",\r\n    \"cpf\": \"911.199.991-20\",\r\n    \"address\": \"Rua Dalva Maria - Bairro Jardineiras - Visconde Do Rio Branco - MG. CEP:999999-99\",\r\n    \"phone\": \"32999999399\",\r\n    \"email\": \"11@dw9davaa.com\",\r\n    \"password\": \"teste123@\",\r\n    \"date\": \"15/02/98\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/owners",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"owners"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Jan 2024 00:38:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"SQLSTATE[23505]: Unique violation: 7 ERROR:  duplicate key value violates unique constraint \\\"owners_cpf_unique\\\"\\nDETAIL:  Key (cpf)=(911.199.991-20) already exists. (Connection: pgsql, SQL: insert into \\\"owners\\\" (\\\"name\\\", \\\"cpf\\\", \\\"address\\\", \\\"phone\\\", \\\"email\\\", \\\"password\\\", \\\"date\\\", \\\"updated_at\\\", \\\"created_at\\\") values (Emsedawdrson Franco, 911.199.991-20, Rua Dalva Maria - Bairro Jardineiras - Visconde Do Rio Branco - MG. CEP:999999-99, 32999999399, 11@dw9davaa.com, $2y$12$yCfkCB1fEv2rM5dhmb13F.ZbaxL8FTjR5bNRk5e9QUlXTwNzoPlGu, 15/02/98, 2024-01-20 00:38:50, 2024-01-20 00:38:50) returning \\\"id\\\")\",\n    \"exception\": \"Illuminate\\\\Database\\\\UniqueConstraintViolationException\",\n    \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php\",\n    \"line\": 817,\n    \"trace\": [\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php\",\n            \"line\": 776,\n            \"function\": \"runQueryCallback\",\n            \"class\": \"Illuminate\\\\Database\\\\Connection\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php\",\n            \"line\": 407,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Database\\\\Connection\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php\",\n            \"line\": 394,\n            \"function\": \"select\",\n            \"class\": \"Illuminate\\\\Database\\\\Connection\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/PostgresProcessor.php\",\n            \"line\": 24,\n            \"function\": \"selectFromWriteConnection\",\n            \"class\": \"Illuminate\\\\Database\\\\Connection\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php\",\n            \"line\": 3387,\n            \"function\": \"processInsertGetId\",\n            \"class\": \"Illuminate\\\\Database\\\\Query\\\\Processors\\\\PostgresProcessor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php\",\n            \"line\": 1968,\n            \"function\": \"insertGetId\",\n            \"class\": \"Illuminate\\\\Database\\\\Query\\\\Builder\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php\",\n            \"line\": 1333,\n            \"function\": \"__call\",\n            \"class\": \"Illuminate\\\\Database\\\\Eloquent\\\\Builder\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php\",\n            \"line\": 1298,\n            \"function\": \"insertAndSetId\",\n            \"class\": \"Illuminate\\\\Database\\\\Eloquent\\\\Model\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php\",\n            \"line\": 1137,\n            \"function\": \"performInsert\",\n            \"class\": \"Illuminate\\\\Database\\\\Eloquent\\\\Model\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php\",\n            \"line\": 1023,\n            \"function\": \"save\",\n            \"class\": \"Illuminate\\\\Database\\\\Eloquent\\\\Model\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Support/helpers.php\",\n            \"line\": 307,\n            \"function\": \"Illuminate\\\\Database\\\\Eloquent\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Database\\\\Eloquent\\\\Builder\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php\",\n            \"line\": 1022,\n            \"function\": \"tap\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php\",\n            \"line\": 23,\n            \"function\": \"create\",\n            \"class\": \"Illuminate\\\\Database\\\\Eloquent\\\\Builder\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php\",\n            \"line\": 2334,\n            \"function\": \"forwardCallTo\",\n            \"class\": \"Illuminate\\\\Database\\\\Eloquent\\\\Model\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/app/Http/Controllers/OwnerControler.php\",\n            \"line\": 38,\n            \"function\": \"__call\",\n            \"class\": \"Illuminate\\\\Database\\\\Eloquent\\\\Model\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Controller.php\",\n            \"line\": 54,\n            \"function\": \"store\",\n            \"class\": \"App\\\\Http\\\\Controllers\\\\OwnerControler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php\",\n            \"line\": 43,\n            \"function\": \"callAction\",\n            \"class\": \"Illuminate\\\\Routing\\\\Controller\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php\",\n            \"line\": 259,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\ControllerDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php\",\n            \"line\": 205,\n            \"function\": \"runController\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php\",\n            \"line\": 806,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 144,\n            \"function\": \"Illuminate\\\\Routing\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php\",\n            \"line\": 50,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php\",\n            \"line\": 159,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php\",\n            \"line\": 125,\n            \"function\": \"handleRequest\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php\",\n            \"line\": 87,\n            \"function\": \"handleRequestUsingNamedLimiter\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 119,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php\",\n            \"line\": 805,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php\",\n            \"line\": 784,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php\",\n            \"line\": 748,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php\",\n            \"line\": 737,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php\",\n            \"line\": 200,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 144,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php\",\n            \"line\": 40,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php\",\n            \"line\": 99,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php\",\n            \"line\": 62,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php\",\n            \"line\": 39,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 119,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php\",\n            \"line\": 175,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php\",\n            \"line\": 144,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/public/index.php\",\n            \"line\": 51,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php\",\n            \"line\": 16,\n            \"function\": \"require_once\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "/owners/:id",
 					"request": {
 						"method": "PATCH",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"address\": \"Rua Roberto Carlos - Bairrso Laranjeiras - Viçosa - MG. CEP:999999-99\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "http://localhost:8080/api/owners/1",
+							"raw": "http://localhost:8080/api/owners/70",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -93,11 +439,84 @@
 							"path": [
 								"api",
 								"owners",
-								"1"
+								"70"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"address\": \"Rua Roberto Carlos - Bairro Laranjeiras - Viçosa - MG. CEP:999999-99\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/owners/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"owners",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jan 2024 23:03:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"Emerson Franco\",\n    \"cpf\": \"999.999.999-99\",\n    \"address\": \"Rua Roberto Carlos - Bairro Laranjeiras - Viçosa - MG. CEP:999999-99\",\n    \"phone\": \"32999999999\",\n    \"email\": \"Emerson@emesdev.com\",\n    \"date\": \"15/02/98\",\n    \"created_at\": \"2024-01-17T23:01:48.000000Z\",\n    \"updated_at\": \"2024-01-17T23:03:45.000000Z\"\n}"
+						}
+					]
 				},
 				{
 					"name": "/owners/:id",
@@ -106,7 +525,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Emesdev\",\r\n    \"cpf\": \"123\",\r\n    \"address\": \"rua\",\r\n    \"phone\": \"123\",\r\n    \"email\": \"email@gmail.com\",\r\n    \"date_of_Birth\": \"dwdaw\"\r\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -127,7 +546,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/owners/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"owners",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.14"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jan 2024 23:04:12 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
 				}
 			]
 		},
@@ -136,11 +619,27 @@
 			"item": [
 				{
 					"name": "/vehicle",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 39|hzLWOHQQBaPhcAPXPAy5PKF0EYap2LsgwOBepQcf88d7b20d",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "http://localhost:8080/api/vehicle",
+							"raw": "http://localhost:8080/api/vehicles",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -148,19 +647,174 @@
 							"port": "8080",
 							"path": [
 								"api",
-								"vehicle"
+								"vehicles"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "401 Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 36|vjQpOZaV6uutiZibmuGNYb1nVFbla5wsgzqYhUe6950bc843",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/vehicles",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"vehicles"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Jan 2024 00:39:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Unauthenticated.\"\n}"
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 39|hzLWOHQQBaPhcAPXPAy5PKF0EYap2LsgwOBepQcf88d7b20d",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/vehicles",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"vehicles"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Jan 2024 00:41:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 2,\n            \"owner_id\": 70,\n            \"brand\": \"Lamborguin\",\n            \"model\": \"Uros\",\n            \"year\": 2024,\n            \"plate\": \"ABCD123\",\n            \"color\": \"Dourado\",\n            \"chassis\": \"00000000000000000\"\n        },\n        {\n            \"id\": 4,\n            \"owner_id\": 70,\n            \"brand\": \"Lamborguin\",\n            \"model\": \"Uros\",\n            \"year\": 2024,\n            \"plate\": \"ABC2123\",\n            \"color\": \"Dourado\",\n            \"chassis\": \"00000000000000000\"\n        },\n        {\n            \"id\": 5,\n            \"owner_id\": 70,\n            \"brand\": \"Lamborguin\",\n            \"model\": \"Uros\",\n            \"year\": 2024,\n            \"plate\": \"ABC1123\",\n            \"color\": \"Dourado\",\n            \"chassis\": \"00000000000000000\"\n        },\n        {\n            \"id\": 6,\n            \"owner_id\": 70,\n            \"brand\": \"Lamborguin\",\n            \"model\": \"Uros\",\n            \"year\": 2024,\n            \"plate\": \"ABC5123\",\n            \"color\": \"Dourado\",\n            \"chassis\": \"00000000000000000\"\n        }\n    ],\n    \"first_page_url\": \"http://localhost:8080/api/vehicles?page=1\",\n    \"from\": 1,\n    \"last_page\": 1,\n    \"last_page_url\": \"http://localhost:8080/api/vehicles?page=1\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://localhost:8080/api/vehicles?page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": null,\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": null,\n    \"path\": \"http://localhost:8080/api/vehicles\",\n    \"per_page\": 5,\n    \"prev_page_url\": null,\n    \"to\": 4,\n    \"total\": 4\n}"
+						}
+					]
 				},
 				{
 					"name": "/vehicle/:id",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 39|hzLWOHQQBaPhcAPXPAy5PKF0EYap2LsgwOBepQcf88d7b20d",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "http://localhost:8080/api/vehicle/1",
+							"raw": "http://localhost:8080/api/vehicles/5",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -168,21 +822,107 @@
 							"port": "8080",
 							"path": [
 								"api",
-								"vehicle",
-								"1"
+								"vehicles",
+								"5"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 39|hzLWOHQQBaPhcAPXPAy5PKF0EYap2LsgwOBepQcf88d7b20d",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/vehicles/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"vehicles",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Jan 2024 00:40:25 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 5,\n    \"owner_id\": 70,\n    \"brand\": \"Lamborguin\",\n    \"model\": \"Uros\",\n    \"year\": 2024,\n    \"plate\": \"ABC1123\",\n    \"color\": \"Dourado\",\n    \"chassis\": \"00000000000000000\",\n    \"created_at\": \"2024-01-19T20:04:16.000000Z\",\n    \"updated_at\": \"2024-01-19T20:04:16.000000Z\"\n}"
+						}
+					]
 				},
 				{
 					"name": "/vehicle",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 39|hzLWOHQQBaPhcAPXPAy5PKF0EYap2LsgwOBepQcf88d7b20d",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"owner_id\": 3,\r\n    \"brand\": \"Lamborguin\",\r\n    \"model\": \"Uros\",\r\n    \"year\": 2024,\r\n    \"plate\": \"ABCD123\",\r\n    \"color\": \"Dourado\",\r\n    \"chassis\": \"00000000000000000\"\r\n}",
+							"raw": "{\r\n    \"owner_id\": 70,\r\n    \"brand\": \"Lamborguin\",\r\n    \"model\": \"Uros\",\r\n    \"year\": 2024,\r\n    \"plate\": \"ABC5113\",\r\n    \"color\": \"Dourado\",\r\n    \"chassis\": \"00000000000000000\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -190,7 +930,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/vehicle",
+							"raw": "http://localhost:8080/api/vehicles",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -198,20 +938,114 @@
 							"port": "8080",
 							"path": [
 								"api",
-								"vehicle"
+								"vehicles"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "201 Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 39|hzLWOHQQBaPhcAPXPAy5PKF0EYap2LsgwOBepQcf88d7b20d",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"owner_id\": 70,\r\n    \"brand\": \"Lamborguin\",\r\n    \"model\": \"Uros\",\r\n    \"year\": 2024,\r\n    \"plate\": \"ABC5113\",\r\n    \"color\": \"Dourado\",\r\n    \"chassis\": \"00000000000000000\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/vehicles",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"vehicles"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Jan 2024 00:42:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"owner_id\": 70,\n    \"brand\": \"Lamborguin\",\n    \"model\": \"Uros\",\n    \"year\": 2024,\n    \"plate\": \"ABC5113\",\n    \"color\": \"Dourado\",\n    \"chassis\": \"00000000000000000\",\n    \"updated_at\": \"2024-01-20T00:42:40.000000Z\",\n    \"created_at\": \"2024-01-20T00:42:40.000000Z\",\n    \"id\": 7\n}"
+						}
+					]
 				},
 				{
 					"name": "/vehicle/:id",
 					"request": {
 						"method": "PATCH",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 39|hzLWOHQQBaPhcAPXPAy5PKF0EYap2LsgwOBepQcf88d7b20d",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"year\": 2023\r\n}",
+							"raw": "{\r\n    \"year\": 2021\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -219,7 +1053,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/vehicle/4",
+							"raw": "http://localhost:8080/api/vehicles/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -227,20 +1061,120 @@
 							"port": "8080",
 							"path": [
 								"api",
-								"vehicle",
-								"4"
+								"vehicles",
+								"2"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 39|hzLWOHQQBaPhcAPXPAy5PKF0EYap2LsgwOBepQcf88d7b20d",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"year\": 2021\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/vehicles/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"vehicles",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Jan 2024 00:43:20 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"owner_id\": 70,\n    \"brand\": \"Lamborguin\",\n    \"model\": \"Uros\",\n    \"year\": 2021,\n    \"plate\": \"ABCD123\",\n    \"color\": \"Dourado\",\n    \"chassis\": \"00000000000000000\",\n    \"created_at\": \"2024-01-19T20:04:05.000000Z\",\n    \"updated_at\": \"2024-01-20T00:43:20.000000Z\"\n}"
+						}
+					]
 				},
 				{
 					"name": "/vehicle/:id",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 39|hzLWOHQQBaPhcAPXPAy5PKF0EYap2LsgwOBepQcf88d7b20d",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "http://localhost:8080/api/vehicle/1",
+							"raw": "http://localhost:8080/api/vehicles/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -248,12 +1182,87 @@
 							"port": "8080",
 							"path": [
 								"api",
-								"vehicle",
-								"1"
+								"vehicles",
+								"2"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 39|hzLWOHQQBaPhcAPXPAy5PKF0EYap2LsgwOBepQcf88d7b20d",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/vehicles/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"vehicles",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.14"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Jan 2024 00:43:57 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
 				}
 			]
 		},
@@ -262,11 +1271,27 @@
 			"item": [
 				{
 					"name": "/records",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 39|hzLWOHQQBaPhcAPXPAy5PKF0EYap2LsgwOBepQcf88d7b20d",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "http://localhost:8080/api/vehicle",
+							"raw": "http://localhost:8080/api/records",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -274,17 +1299,107 @@
 							"port": "8080",
 							"path": [
 								"api",
-								"vehicle"
+								"records"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 39|hzLWOHQQBaPhcAPXPAy5PKF0EYap2LsgwOBepQcf88d7b20d",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/records",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"records"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Jan 2024 00:49:22 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 2,\n            \"vehicle_id\": 5,\n            \"owner_id\": 77,\n            \"service_date\": \"2002-05-12\",\n            \"service_description\": \"Troca dos freios dienteiros; Alinhamento de rodas;\",\n            \"cost\": \"2556.50\"\n        }\n    ],\n    \"first_page_url\": \"http://localhost:8080/api/records?page=1\",\n    \"from\": 1,\n    \"last_page\": 1,\n    \"last_page_url\": \"http://localhost:8080/api/records?page=1\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://localhost:8080/api/records?page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": null,\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": null,\n    \"path\": \"http://localhost:8080/api/records\",\n    \"per_page\": 5,\n    \"prev_page_url\": null,\n    \"to\": 1,\n    \"total\": 1\n}"
+						}
+					]
 				},
 				{
 					"name": "/records/:id",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 39|hzLWOHQQBaPhcAPXPAy5PKF0EYap2LsgwOBepQcf88d7b20d",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "http://localhost:8080/api/vehicle/1",
 							"protocol": "http",
@@ -299,16 +1414,107 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 39|hzLWOHQQBaPhcAPXPAy5PKF0EYap2LsgwOBepQcf88d7b20d",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/records/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"records",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Jan 2024 00:49:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"vehicle_id\": 5,\n    \"owner_id\": 77,\n    \"service_date\": \"2002-05-12\",\n    \"service_description\": \"Troca dos freios dienteiros; Alinhamento de rodas;\",\n    \"cost\": \"2556.50\",\n    \"created_at\": \"2024-01-20T00:48:12.000000Z\",\n    \"updated_at\": \"2024-01-20T00:48:12.000000Z\"\n}"
+						}
+					]
 				},
 				{
 					"name": "/records",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 39|hzLWOHQQBaPhcAPXPAy5PKF0EYap2LsgwOBepQcf88d7b20d",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"owner_id\": 3,\r\n    \"brand\": \"Lamborguin\",\r\n    \"model\": \"Uros\",\r\n    \"year\": 2024,\r\n    \"plate\": \"ABCD123\",\r\n    \"color\": \"Dourado\",\r\n    \"chassis\": \"00000000000000000\"\r\n}",
+							"raw": "{\r\n    \"vehicle_id\": 3,\r\n    \"owner_id\": 77,\r\n    \"service_date\": \"2002-05-12 14:20:10\",\r\n    \"service_description\": \"Troca dos freios dienteiros; Alinhamento de rodas;\",\r\n    \"cost\": 2556.5\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -328,13 +1534,477 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "201 Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 39|hzLWOHQQBaPhcAPXPAy5PKF0EYap2LsgwOBepQcf88d7b20d",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"vehicle_id\": 5,\r\n    \"owner_id\": 77,\r\n    \"service_date\": \"2002-05-12 14:20:10\",\r\n    \"service_description\": \"Troca dos freios dienteiros; Alinhamento de rodas;\",\r\n    \"cost\": 2556.5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/records",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"records"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Jan 2024 00:48:12 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"vehicle_id\": 5,\n    \"owner_id\": 77,\n    \"service_date\": \"2002-05-12 14:20:10\",\n    \"service_description\": \"Troca dos freios dienteiros; Alinhamento de rodas;\",\n    \"cost\": 2556.5,\n    \"updated_at\": \"2024-01-20T00:48:12.000000Z\",\n    \"created_at\": \"2024-01-20T00:48:12.000000Z\",\n    \"id\": 2\n}"
+						}
+					]
 				},
 				{
 					"name": "/records/:id",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
 					"request": {
 						"method": "PATCH",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 39|hzLWOHQQBaPhcAPXPAy5PKF0EYap2LsgwOBepQcf88d7b20d",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"service_description\": \"Atualizando Descrição\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/vehicle/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"vehicle",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 39|hzLWOHQQBaPhcAPXPAy5PKF0EYap2LsgwOBepQcf88d7b20d",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"service_description\": \"Atualizando Descrição\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/records/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"records",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Jan 2024 00:50:09 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "55"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"vehicle_id\": 5,\n    \"owner_id\": 77,\n    \"service_date\": \"2002-05-12\",\n    \"service_description\": \"Atualizando Descrição\",\n    \"cost\": \"2556.50\",\n    \"created_at\": \"2024-01-20T00:48:12.000000Z\",\n    \"updated_at\": \"2024-01-20T00:50:09.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/records/:id",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 39|hzLWOHQQBaPhcAPXPAy5PKF0EYap2LsgwOBepQcf88d7b20d",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/records/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"records",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 39|hzLWOHQQBaPhcAPXPAy5PKF0EYap2LsgwOBepQcf88d7b20d",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/records/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"records",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.14"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Jan 2024 00:50:42 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Calleds",
+			"item": [
+				{
+					"name": "/calleds",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 39|hzLWOHQQBaPhcAPXPAy5PKF0EYap2LsgwOBepQcf88d7b20d",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/calleds",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"calleds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/calleds/:id",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 39|hzLWOHQQBaPhcAPXPAy5PKF0EYap2LsgwOBepQcf88d7b20d",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/calleds/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"calleds",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/calleds",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 39|hzLWOHQQBaPhcAPXPAy5PKF0EYap2LsgwOBepQcf88d7b20d",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"owner_id\": 78,\r\n    \"title\": \"Titulo chamatisvo\",\r\n    \"description\": \"Descrição Chamativa\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/calleds",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"calleds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/calleds/:id",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 39|hzLWOHQQBaPhcAPXPAy5PKF0EYap2LsgwOBepQcf88d7b20d",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"year\": 2023\r\n}",
@@ -345,7 +2015,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/vehicle/4",
+							"raw": "http://localhost:8080/api/calleds/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -353,20 +2023,47 @@
 							"port": "8080",
 							"path": [
 								"api",
-								"vehicle",
-								"4"
+								"calleds",
+								"1"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "/vehicle/:id",
+					"name": "/calleds/:id",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 39|hzLWOHQQBaPhcAPXPAy5PKF0EYap2LsgwOBepQcf88d7b20d",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "http://localhost:8080/api/records/1",
+							"raw": "http://localhost:8080/api/calleds/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -374,12 +2071,206 @@
 							"port": "8080",
 							"path": [
 								"api",
-								"records",
+								"calleds",
 								"1"
 							]
 						}
 					},
 					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "/login",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"Emerson@emesdeaadwdasdavsa.com\",\r\n    \"password\": \"teste123@\",\r\n    \"device_name\": \"iphone\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"Emerson@emesdev.com\",\r\n    \"password\": \"teste123@\",\r\n    \"device_name\": \"iphone\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 18 Jan 2024 02:05:21 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Email ou Senha não conferem\"\n}"
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"Emerson@emesdeaadwdasdavsa.com\",\r\n    \"password\": \"teste123@\",\r\n    \"device_name\": \"iphone\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Jan 2024 00:33:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"39|hzLWOHQQBaPhcAPXPAy5PKF0EYap2LsgwOBepQcf88d7b20d\"\n}"
+						}
+					]
 				}
 			]
 		}
